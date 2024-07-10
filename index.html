@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <title>Frontend Mentor | FAQ accordion</title>
   <link rel="shortcut icon" href="assets/images/favicon-32x32.png" type="image/x-icon">
@@ -18,9 +21,16 @@
       box-sizing: border-box;
       font-family: 'Work Sans', sans-serif;
     }
+
     body {
       background-color: rgb(239, 239, 239);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      justify-content: center;
+      align-items: center;
     }
+
     .background-image {
       background-image: url(assets/images/background-pattern-desktop.svg);
       background-repeat: no-repeat;
@@ -28,67 +38,118 @@
       width: 100%;
       height: 44vh;
     }
+
     .main {
       height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
     }
+
     .box {
       padding: 20px;
-      width: 650px;
+      width: 80%;
+      max-width: 650px;
       border-radius: 15px;
       background-color: white;
-      transition:  height 0.3s ease;
+      transition: height 0.3s ease;
     }
+
     .title {
       margin: 24px;
       display: flex;
     }
-    .title > img {
+
+    .title>img {
       margin-right: 15px;
+
     }
-    .title > h1 {
+
+    .title>h1 {
       font-weight: 700;
-      font-size: 3rem;
+      font-size: 2rem;
       text-align: center;
     }
+
     .subTopics {
       margin: 24px;
     }
-    .subTopics > p {
-      width: 500px;
+
+    .subTopics>p {
+      width: 100%;
       text-align: left;
       margin-top: 10px;
-      font-size: 16px;
+      font-size: 14px;
       color: gray;
     }
+
     .sub-title {
       display: flex;
       justify-content: space-between;
+      align-items: center;
     }
+    .sub-title-container {
+      border-bottom: 1px solid lightgray;
+      padding-bottom: 10px;
+    }
+
     .sub-title h3 {
       margin: 0;
       font-size: 16px;
     }
+
     .toggle-image {
       cursor: pointer;
-      width: 30px;
+      width: 20px;
     }
+
     .toggle-text {
-      display: none; /* Inicialmente escondido */
+      display: none;
+      /* Inicialmente escondido */
       margin-top: 10px;
     }
+
     .attribution {
       font-size: 11px;
       text-align: center;
-      margin-top: 20%;
+      margin-top: auto;
+
     }
+
     .attribution a {
       color: hsl(228, 45%, 44%);
     }
+
+    @media (min-width: 768px) {
+      .box {
+        padding: 30px;
+        /* Ajuste de padding para desktop */
+      }
+
+      .title>h1 {
+        font-size: 3rem;
+        align-items: center;
+        /* Tamanho da fonte aumentado para desktop */
+      }
+
+      .subTopics>p {
+        font-size: 16px;
+        /* Tamanho da fonte restaurado para desktop */
+      }
+
+      .toggle-image {
+        width: 30px;
+        /* Tamanho da imagem restaurado para desktop */
+      }
+
+      .attribution {
+        font-size: 11px;
+        /* Tamanho da fonte restaurado para desktop */
+      }
+    }
   </style>
 </head>
+
 <body>
   <div class="background-image">
     <div class="main">
@@ -97,36 +158,42 @@
           <img src="assets/images/icon-star.svg" alt="Purple Star Image">
           <h1>FAQs</h1>
         </div>
-        <div class="subTopics">
-          <div class="sub-title">
-            <h3>What is Frontend Mentor, and how will it help me?</h3>
-            <img src="assets/images/icon-plus.svg" class="toggle-image">
-          </div>
-          <p class="toggle-text">
-            Frontend Mentor offers realistic coding challenges to help developers improve their
-            frontend coding skills with projects in HTML, CSS, and JavaScript. It's suitable for
-            all levels and ideal for portfolio building.
-          </p>
+        <div class="subTopics"><div class="sub-title-container">
+          
+            <div class="sub-title">
+              <h3>What is Frontend Mentor, and how will it help me?</h3>
+              <img src="assets/images/icon-plus.svg" class="toggle-image">
+            </div>
+            <p class="toggle-text">
+              Frontend Mentor offers realistic coding challenges to help developers improve their
+              frontend coding skills with projects in HTML, CSS, and JavaScript. It's suitable for
+              all levels and ideal for portfolio building.
+            </p>
         </div>
-        <div class="subTopics">
-          <div class="sub-title">
-            <h3>Is Frontend Mentor free?</h3>
-            <img src="assets/images/icon-plus.svg" class="toggle-image">
-          </div>
-          <p class="toggle-text">
-            Yes, Frontend Mentor offers both free and premium coding challenges, with the free
-            option providing access to a range of projects suitable for all skill levels.
-          </p>
         </div>
-        <div class="subTopics">
-          <div class="sub-title">
-            <h3>Can I use Frontend Mentor projects in my portfolio?</h3>
-            <img src="assets/images/icon-plus.svg" class="toggle-image">
-          </div>
-          <p class="toggle-text">
-            Yes, you can use projects completed on Frontend Mentor in your portfolio. It's an excellent
-            way to showcase your skills to potential employers!
-          </p>
+        <div class="subTopics"><div class="sub-title-container">
+          
+            <div class="sub-title">
+              <h3>Is Frontend Mentor free?</h3>
+              <img src="assets/images/icon-plus.svg" class="toggle-image">
+            </div>
+            <p class="toggle-text">
+              Yes, Frontend Mentor offers both free and premium coding challenges, with the free
+              option providing access to a range of projects suitable for all skill levels.
+            </p>
+        </div>
+        </div>
+        <div class="subTopics"><div class="sub-title-container">
+          
+            <div class="sub-title">
+              <h3>Can I use Frontend Mentor projects in my portfolio?</h3>
+              <img src="assets/images/icon-plus.svg" class="toggle-image">
+            </div>
+            <p class="toggle-text">
+              Yes, you can use projects completed on Frontend Mentor in your portfolio. It's an excellent
+              way to showcase your skills to potential employers!
+            </p>
+        </div>
         </div>
         <div class="subTopics">
           <div class="sub-title">
@@ -138,21 +205,21 @@
             channel where you can ask questions and seek support from other community members.
           </p>
         </div>
-        <div class="attribution">
-          Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-          Coded by <a href="#">Ezequiel</a>.
-        </div>
       </div>
     </div>
   </div>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Ezequiel</a>.
+  </div>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script>
-    $(document).ready(function(){
-      $('.toggle-image').click(function(){
+    $(document).ready(function () {
+      $('.toggle-image').click(function () {
         var imgSrc = $(this).attr('src');
         var toggleText = $(this).closest('.subTopics').find('.toggle-text');
-        
-        if(imgSrc === 'assets/images/icon-plus.svg') {
+
+        if (imgSrc === 'assets/images/icon-plus.svg') {
           $(this).attr('src', 'assets/images/icon-minus.svg'); // Muda a imagem para "-"
           toggleText.slideDown(); // Mostra o texto
         } else {
@@ -163,4 +230,5 @@
     });
   </script>
 </body>
+
 </html>
