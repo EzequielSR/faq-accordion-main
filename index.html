@@ -88,6 +88,7 @@
       justify-content: space-between;
       align-items: center;
     }
+
     .sub-title-container {
       border-bottom: 1px solid lightgray;
       padding-bottom: 10px;
@@ -152,8 +153,9 @@
           <img src="assets/images/icon-star.svg" alt="Purple Star Image">
           <h1>FAQs</h1>
         </div>
-        <div class="subTopics"><div class="sub-title-container">
-          
+        <div class="subTopics">
+          <div class="sub-title-container">
+
             <div class="sub-title">
               <h3>What is Frontend Mentor, and how will it help me?</h3>
               <img src="assets/images/icon-plus.svg" class="toggle-image">
@@ -163,10 +165,11 @@
               frontend coding skills with projects in HTML, CSS, and JavaScript. It's suitable for
               all levels and ideal for portfolio building.
             </p>
+          </div>
         </div>
-        </div>
-        <div class="subTopics"><div class="sub-title-container">
-          
+        <div class="subTopics">
+          <div class="sub-title-container">
+
             <div class="sub-title">
               <h3>Is Frontend Mentor free?</h3>
               <img src="assets/images/icon-plus.svg" class="toggle-image">
@@ -175,10 +178,11 @@
               Yes, Frontend Mentor offers both free and premium coding challenges, with the free
               option providing access to a range of projects suitable for all skill levels.
             </p>
+          </div>
         </div>
-        </div>
-        <div class="subTopics"><div class="sub-title-container">
-          
+        <div class="subTopics">
+          <div class="sub-title-container">
+
             <div class="sub-title">
               <h3>Can I use Frontend Mentor projects in my portfolio?</h3>
               <img src="assets/images/icon-plus.svg" class="toggle-image">
@@ -187,7 +191,7 @@
               Yes, you can use projects completed on Frontend Mentor in your portfolio. It's an excellent
               way to showcase your skills to potential employers!
             </p>
-        </div>
+          </div>
         </div>
         <div class="subTopics">
           <div class="sub-title">
@@ -215,10 +219,10 @@
 
         if (imgSrc === 'assets/images/icon-plus.svg') {
           $(this).attr('src', 'assets/images/icon-minus.svg');
-          toggleText.slideDown(); 
+          toggleText.slideDown();
         } else {
-          $(this).attr('src', 'assets/images/icon-plus.svg'); 
-          toggleText.slideUp(); 
+          $(this).attr('src', 'assets/images/icon-plus.svg');
+          toggleText.slideUp();
         }
       });
     });
