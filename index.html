@@ -105,7 +105,6 @@
 
     .toggle-text {
       display: none;
-      /* Inicialmente escondido */
       margin-top: 10px;
     }
 
@@ -123,28 +122,23 @@
     @media (min-width: 768px) {
       .box {
         padding: 30px;
-        /* Ajuste de padding para desktop */
       }
 
       .title>h1 {
         font-size: 3rem;
         align-items: center;
-        /* Tamanho da fonte aumentado para desktop */
       }
 
       .subTopics>p {
         font-size: 16px;
-        /* Tamanho da fonte restaurado para desktop */
       }
 
       .toggle-image {
         width: 30px;
-        /* Tamanho da imagem restaurado para desktop */
       }
 
       .attribution {
         font-size: 11px;
-        /* Tamanho da fonte restaurado para desktop */
       }
     }
   </style>
@@ -220,11 +214,11 @@
         var toggleText = $(this).closest('.subTopics').find('.toggle-text');
 
         if (imgSrc === 'assets/images/icon-plus.svg') {
-          $(this).attr('src', 'assets/images/icon-minus.svg'); // Muda a imagem para "-"
-          toggleText.slideDown(); // Mostra o texto
+          $(this).attr('src', 'assets/images/icon-minus.svg');
+          toggleText.slideDown(); 
         } else {
-          $(this).attr('src', 'assets/images/icon-plus.svg'); // Muda a imagem para "+"
-          toggleText.slideUp(); // Esconde o texto
+          $(this).attr('src', 'assets/images/icon-plus.svg'); 
+          toggleText.slideUp(); 
         }
       });
     });
